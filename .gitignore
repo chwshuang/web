@@ -1,0 +1,65 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+# -------- 过滤编译代码 ------- #
+*.class
+
+# ---- 过滤苹果电脑隐藏文件 ----- #
+.DS_Store
+*/.DS_Store
+
+# ------- 过滤打包文件 -------- #
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# -- 过滤开发工具隐藏、配置文件 -- #
+#Eclipse Files#
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+# IntelliJ project files
+*.iml
+*.ipr
+*.iws
+.idea/
+out
+gen
+
+# ------- 过滤编译工具 -------- #
+# External tool builders
+.externalToolBuilders/
+
+# ------ 过滤Maven文件 ------- #
+#Maven Files#
+*/target/
+target/
+pom.xml.*
+*/pom.xml.*
+release.properties
+
+
+
+
