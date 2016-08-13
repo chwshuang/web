@@ -214,25 +214,6 @@
             </snapshots>
         </repository>
     </repositories>
-    <!--<repository>
-                <id>nexus</id>
-                <name>osc</name>
-                <url>http://maven.oschina.net/content/groups/public/</url>
-                <releases>
-                    <enabled>true</enabled>
-                </releases>
-                <snapshots>
-                    <enabled>false</enabled>
-                </snapshots>
-            </repository>-->
-    <!--<repository>
-        <id>public</id>
-        <name>public</name>
-        <url>http://172.18.100.83:8081/nexus/content/groups/public/</url>
-        <snapshots>
-            <enabled>true</enabled>
-        </snapshots>
-    </repository>-->
     <build>
         <plugins>
             <!-- 指定Maven编译插件，如果不设置，它就会用maven-compiler-plugin默认的jdk版本来进行处理 -->
