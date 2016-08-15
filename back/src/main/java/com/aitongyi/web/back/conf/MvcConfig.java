@@ -16,7 +16,10 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 @EnableAspectJAutoProxy
 @EnableScheduling
-@ComponentScan(basePackages = {"com.aitongyi.web.back.controller","com.aitongyi.web.service","com.aitongyi.web.task"})
+@ComponentScan(basePackages =
+        {"com.aitongyi.web.back.controller",
+         "com.aitongyi.web.service",
+         "com.aitongyi.web.task"})
 @MapperScan("com.aitongyi.web.dao.mapper")
 public class MvcConfig extends WebMvcConfigurerAdapter {
  

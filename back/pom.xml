@@ -31,7 +31,11 @@
             <artifactId>service</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.aitongyi.web</groupId>
+            <artifactId>task</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!-- spring  -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -55,11 +59,6 @@
         </dependency>
 
         <!-- end -->
-
-
-
-
-
 
 
     </dependencies>
