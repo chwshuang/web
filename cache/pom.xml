@@ -11,5 +11,22 @@
 
     <artifactId>cache</artifactId>
 
-    <packaging>war</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- CacheService缓存服务中需要用到的对象依赖    -->
+        <dependency>
+            <groupId>com.aitongyi.web</groupId>
+            <artifactId>bean</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- Redis依赖    -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.7.2</version>
+        </dependency>
+    </dependencies>
 </project>

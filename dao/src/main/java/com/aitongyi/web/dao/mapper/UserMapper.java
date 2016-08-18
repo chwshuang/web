@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Select;
 
 /**
  * 用户数据映射
- * Created by hushuang on 16/8/8.
+ * Created by admin on 16/8/8.
  */
 public interface UserMapper {
 

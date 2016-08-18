@@ -1,7 +1,7 @@
 package com.aitongyi.web.service;
 
 /**
- * Created by hushuang on 16/8/8.
+ * Created by admin on 16/8/8.
  */
 
 import com.aitongyi.web.bean.User;

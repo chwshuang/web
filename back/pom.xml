@@ -36,6 +36,20 @@
             <artifactId>task</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!--  缓存模块  -->
+        <dependency>
+            <groupId>com.aitongyi.web</groupId>
+            <artifactId>cache</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+
+
         <!-- spring  -->
         <dependency>
             <groupId>org.springframework</groupId>

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  *  自定义定时任务
- * Created by hushuang on 16/8/15.
+ * Created by admin on 16/8/15.
  */
 @Component
 public class CustomTask {

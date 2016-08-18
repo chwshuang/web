@@ -3,7 +3,7 @@ package com.aitongyi.web.bean;
 import java.util.Date;
 
 /**
- * Created by hushuang on 16/8/8.
+ * Created by admin on 16/8/8.
  */
 public class User {
     private Integer id;
@@ -50,5 +50,17 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("User{");
+        sb.append("id=").append(id);
+        sb.append(", username='").append(username).append('\'');
+        sb.append(", password='").append(password).append('\'');
+        sb.append(", enabled=").append(enabled);
+        sb.append(", createDate=").append(createDate);
+        sb.append('}');
+        return sb.toString();
     }
 }
