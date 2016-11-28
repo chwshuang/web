@@ -18,5 +18,6 @@
             <artifactId>bean</artifactId>
             <version>${project.version}</version>
         </dependency>
+
     </dependencies>
 </project>

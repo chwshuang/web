@@ -1,0 +1,59 @@
+<!--<div class="modal-header">-->
+    <!--<h3 class="modal-title">Modal!</h3>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+    <form name="form" class="form-horizontal form-validation">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>修改用户信息</strong>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">用户编号</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" placeholder="email" ng-model="editUser.id" required >
+                    </div>
+                </div>
+                <div class="line line-dashed b-b line-lg pull-in"></div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">用户名称</label>
+                    <div class="col-sm-9">
+                        <input type="url" class="form-control" placeholder="http://" ng-model="editUser.username" required >
+                    </div>
+                </div>
+                <div class="line line-dashed b-b line-lg pull-in"></div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">密码</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="digits" ng-model="editUser.password" ng-pattern="/^[0-9]+$/" required >
+                    </div>
+                </div>
+                <div class="line line-dashed b-b line-lg pull-in"></div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">状态</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" required >
+                            <option value="true"  ng-selected="editUser.enabled">无效</option>
+                            <option value="false" ng-selected="editUser.enabled">有效</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="line line-dashed b-b line-lg pull-in"></div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">创建时间</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="YYYY-MM-DD" ng-model="editUse.createDate" ng-pattern="/[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])$/" required >
+                    </div>
+                </div>
+            </div>
+            <footer class="panel-footer text-right bg-light lter">
+                <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+                <button class="btn btn-primary" ng-click="ok()">OK</button>
+            </footer>
+        </div>
+    </form>
+<!--</div>-->
+<!--<div class="modal-footer" class="panel-footer text-c bg-light lter">                  -->
+    <!--<button class="btn btn-default" ng-click="cancel()">Cancel</button>-->
+    <!--<button class="btn btn-primary" ng-click="ok()">OK</button>-->
+<!--</div>-->

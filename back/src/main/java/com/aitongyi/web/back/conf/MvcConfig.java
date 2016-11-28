@@ -1,18 +1,20 @@
 package com.aitongyi.web.back.conf;
 
 //import org.mybatis.spring.annotation.MapperScan;
+import com.aitongyi.web.back.security.SecurityHandlerInterceptor;
+import com.aitongyi.web.service.UserService;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
-import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+@Configuration
 @EnableWebMvc
 @EnableAspectJAutoProxy
 @EnableScheduling
@@ -23,14 +25,30 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @MapperScan("com.aitongyi.web.dao.mapper")
 public class MvcConfig extends WebMvcConfigurerAdapter {
  
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//    }
 
+    @Autowired
+    private UserService userService;
+
+    /**
+     * 添加安全处理拦截器
+     * @param registry
+     */
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new SecurityHandlerInterceptor(userService));
     }
- 
+
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
+    }
+
+    @Override
+    public void configurePathMatch(PathMatchConfigurer configurer) {
+        super.configurePathMatch(configurer);
     }
 
     /**

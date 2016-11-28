@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * 用户服务接口
  *
@@ -31,12 +33,13 @@ public class UserService {
     @Transactional
     public void saveUser(User user) {
         userMapper.saveUser(user);
-//        测试异常后数据是否回滚
-//        getError();
     }
 
-    private void getError() {
-        int i = 1 / 0;
-        logger.info("i:{}" , i);
+    public List<User> getUserList(int offsize, int count) {
+        return userMapper.getUserList(offsize, count);
+    }
+
+    public Integer getUserListCount() {
+        return userMapper.getUserListCount();
     }
 }

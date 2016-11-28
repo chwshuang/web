@@ -1,0 +1,92 @@
+<div class="bg-light lter b-b wrapper-md">
+    <h1 class="m-n font-thin h3">用户管理</h1>
+</div>
+<div class="wrapper-md" ng-controller="testController">
+    <div class="panel panel-default">
+        <!--  标题栏   -->
+        <div class="panel-heading">用户列表</div>
+        <!--  工具栏   -->
+        <div class="row wrapper">
+            <div class="col-sm-5 m-b-xs">
+                <select class="input-sm form-control w-sm inline v-middle">
+                    <option value="0">Bulk action</option>
+                    <option value="1">Delete selected</option>
+                    <option value="2">Bulk edit</option>
+                    <option value="3">Export</option>
+                </select>
+                <button class="btn btn-sm btn-default">Apply</button>
+            </div>
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-3">
+                <div class="input-group">
+                    <input type="text" class="input-sm form-control" placeholder="Search">
+                    <span class="input-group-btn">
+            <button class="btn btn-sm btn-default" type="button">Go!</button>
+          </span>
+                </div>
+            </div>
+        </div>
+        <!--  内容栏   -->
+        <div class="table-responsive">
+                <table class="table table-striped b-t b-light">
+                    <thead>
+                    <tr>
+                        <th style="width:20px;">
+                            <label class="i-checks m-b-none">
+                                <input type="checkbox"><i></i>
+                            </label>
+                        </th>
+                        <th>用户编号</th>
+                        <th>用户名称</th>
+                        <th>用户权限</th>
+                        <th>状态</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in list">
+                        <td><label class="i-checks m-b-none"><input type="checkbox"><i></i></label></td>
+                        <td>{{item.id}}</td>
+                        <td>{{item.username}}</td>
+                        <td>{{item.password}}</td>
+                        <td>{{item.enabled == true ? '有效' : '无效'}}</td>
+                        <td>{{item.createDate}}</td>
+
+                        <td>
+                            <a href class="btn btn-primary" ng-click="upData($index)"><i class="fa fa-edit"></i></a>
+                            <a href class="active" ng-click="delete($index)" ui-toggle-class><i class="glyphicon glyphicon-trash"></i></a>
+                        </td>
+                        <td>
+                            <a href class="active" ui-toggle-class>
+                                <i class="fa fa-check text-success text-active"></i>
+                                <i class="fa fa-times text-danger text"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="clearfix"></div>
+                <div class="row" style="margin-left: 0px;margin-right: 0px;">
+                    <div class="col-xs-12" style="width: 100%;">
+                        <div>
+                            <tm-pagination conf="paginationConf"></tm-pagination>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <script type="text/ng-template" id="myModalContent.html">
+        <div ng-include="'tpl/user_edit_modal.html'"></div>
+    </script>
+    <div class="panel-heading b-b b-light">Modal</div>
+    <div class="panel-body">
+        <button class="btn btn-success" ng-click="open()">Open me!</button>
+        <button class="btn btn-default" ng-click="open('lg')">Large modal</button>
+        <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
+    </div>
+
+</div>

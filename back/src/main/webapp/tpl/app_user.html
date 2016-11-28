@@ -1,0 +1,93 @@
+<div class="bg-light lter b-b wrapper-md">
+    <h1 class="m-n font-thin h3">用户管理</h1>
+</div>
+<div class="wrapper-md" ng-controller="UserCtrl">
+    <div class="panel panel-default">
+        <!--  标题栏   -->
+        <div class="panel-heading">用户列表</div>
+        <!--  工具栏   -->
+        <div class="row wrapper">
+            <div class="col-sm-5 m-b-xs">
+                <select class="input-sm form-control w-sm inline v-middle">
+                    <option value="0">Bulk action</option>
+                    <option value="1">Delete selected</option>
+                    <option value="2">Bulk edit</option>
+                    <option value="3">Export</option>
+                </select>
+                <button class="btn btn-sm btn-default">Apply</button>
+            </div>
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-3">
+                <div class="input-group">
+                    <input type="text" class="input-sm form-control" placeholder="Search">
+                    <span class="input-group-btn">
+            <button class="btn btn-sm btn-default" type="button">Go!</button>
+          </span>
+                </div>
+            </div>
+        </div>
+        <!--  内容栏   -->
+        <div class="table-responsive">
+            <table class="table table-striped b-t b-light">
+                <thead>
+                <tr>
+                    <th style="width:20px;">
+                        <label class="i-checks m-b-none">
+                            <input type="checkbox"><i></i>
+                        </label>
+                    </th>
+                    <th>用户编号</th>
+                    <th>用户名称</th>
+                    <th>用户权限</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in list">
+                    <td><label class="i-checks m-b-none"><input type="checkbox"><i></i></label></td>
+                    <td>{{item.engine}}</td>
+                    <td>{{item.browser}}</td>
+                    <td>{{item.platform}}</td>
+                    <td>{{item.version}}</td>
+                    <td>{{item.grade}}</td>
+                    <td>
+                        <a href class="active" ui-toggle-class>
+                            <i class="fa fa-check text-success text-active"></i>
+                            <i class="fa fa-times text-danger text"></i>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <footer class="panel-footer">
+            <div class="row">
+                <div class="col-sm-4 hidden-xs">
+                    <select class="input-sm form-control w-sm inline v-middle">
+                        <option value="0">Bulk action</option>
+                        <option value="1">Delete selected</option>
+                        <option value="2">Bulk edit</option>
+                        <option value="3">Export</option>
+                    </select>
+                    <button class="btn btn-sm btn-default">Apply</button>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small>
+                </div>
+                <div class="col-sm-4 text-right text-center-xs">
+                    <ul class="pagination pagination-sm m-t-none m-b-none">
+                        <li><a href><i class="fa fa-chevron-left"></i></a></li>
+                        <li><a href>1</a></li>
+                        <li><a href>2</a></li>
+                        <li><a href>3</a></li>
+                        <li><a href>4</a></li>
+                        <li><a href>5</a></li>
+                        <li><a href><i class="fa fa-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
